@@ -10,7 +10,7 @@ def submit_to():
     conn = sqlite3.connect('names.db')
     c = conn.cursor()
     # Create a db file initially and comment out next lines as they are made to auto create database.
-    c.execute("""CREATE TABLE name(
+    c.execute("""CREATE TABLE IF NOT EXISTS name(
     name text,
     father_name text,
     mother_name text,
